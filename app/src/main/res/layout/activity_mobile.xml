@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- AppBarLayout containing Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Toolbar with centered title and back button -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#8865E4"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back Button"
+                android:src="@drawable/back_arrow" />
+
+            <!-- Toolbar Title (Centered) -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Intern Responsibilities"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main content layout (ScrollView) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Content LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Information Texts -->
+            <TextView
+                android:id="@+id/info_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Computing Intern Responsibilities:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/info_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Experience in mobile app development using Android or iOS."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/info_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Familiarity with mobile app design principles and guidelines."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/info_text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Knowledge of RESTful APIs and mobile libraries for networking."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/info_text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• This internship position is located in Bangalore."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="78dp"
+                android:layout_marginRight="78dp"
+                android:elevation="4dp"
+                android:backgroundTint="#327EBA"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "100003075224",
+    "project_id": "internship-evi-app",
+    "storage_bucket": "internship-evi-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100003075224:android:f94dfac3fb0dc952efeced",
+        "android_client_info": {
+          "package_name": "com.example.internship_eviapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnljIelDH6XRNiwhfOWP827kW-mVBoFTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background1">
+
+    <!-- AppBarLayout containing Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Toolbar with centered title and back button -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#8865E4"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back Button"
+                android:src="@drawable/back_arrow" />
+
+            <!-- Toolbar Title (Centered) -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment Details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main content layout (RelativeLayout) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_margin="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Payment Amount TextView -->
+        <TextView
+            android:id="@+id/textView_payment_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Amount: Rs 500"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"/>
+
+        <!-- EditTexts for Card Number, Expiry Date, CVV -->
+        <EditText
+            android:id="@+id/editText_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_payment_amount"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editText_expiry_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_card_number"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:hint="Expiry Date (MM/YY)"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editText_cvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_expiry_date"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:hint="CVV"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <!-- Select Payment Method TextView -->
+        <TextView
+            android:id="@+id/textView_select_payment_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_cvv"
+            android:layout_marginTop="32dp"
+            android:text="Select Payment Method:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"/>
+
+        <!-- RadioGroup for Payment Methods -->
+        <RadioGroup
+            android:id="@+id/radio_group_payment_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_select_payment_method"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_google_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Pay"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_paytm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paytm"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <!-- Add more payment options as needed -->
+
+        </RadioGroup>
+
+        <!-- Buttons for Cancel and Process Payment -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/radio_group_payment_methods"
+            android:layout_marginTop="32dp">
+
+            <Button
+                android:id="@+id/button_cancel_payment"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_margin="5dp"
+                android:backgroundTint="#F1786F"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/button_process_payment"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:text="Process Payment"
+                android:backgroundTint="#459E48"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <!-- Progress Bar for Payment Details -->
+        <ProgressBar
+            android:id="@+id/progressBar_payment_details"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_process_payment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
